@@ -22,6 +22,16 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
+     overrides: [
+    {
+      files: ["backend/**/*.js"],
+      env: { node: true },
+    },
+    {
+      files: ["src/**/*.jsx"],
+      env: { browser: true },
+    },
+  ],
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },

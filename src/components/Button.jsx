@@ -1,15 +1,17 @@
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 
-const button = ({ text, onClick })=> {
+// Then use it as:
+
+const Button = ({ text, onClick }) => {
   return (
-    <motion.button
+    <Motion.motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors"
-      onClick={onClick}
-    >
+      onClick={onClick}>
       {text}
-    </motion.button>
+    </Motion.motion.button>
   );
-}
- export default button;
+};
+
+export default Button;
